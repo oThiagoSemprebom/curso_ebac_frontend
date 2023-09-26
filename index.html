@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <link rel="stylesheet" href="./main.css"/>
+    <title>Exercício plugins jquery</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Formulário</h1>
-    <form id="form-num">
-        <input id="numero-a" type="number" required placeholder="Número A"/>
-        <input id="numero-b" type="number" required placeholder="Número B"/>
-        <button id="sub" type="submit">Enviar</button>
+    <form>
+        <div class="form-campo">
+            <label for="nome-completo">Nome completo:</label>
+            <input id="nome-completo" type="text">
+            <label for="e-mail">E-mail:</label>
+            <input type="email" name="email" id="e-mail">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone">
+            <label for="CPF">CPF:</label>
+            <input type="text" id="CPF">
+            <label for="endereço">Endereço completo:</label>
+            <input type="text" id="endereço">
+            <label for="CEP">CEP:</label>
+            <input type="text" id="CEP">
+        </div>
+        <button type="submit">Cadastrar</button>
     </form>
-    <script src="./main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#CPF').mask('000.000.000-00')
+            $('#telefone').mask('(00) 00000-0000')
+            $('#CEP').mask('00000-000')
+        })
+    </script>
 </body>
 </html>

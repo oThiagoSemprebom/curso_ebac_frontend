@@ -1,3 +1,24 @@
-input, button {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-campo label {
     display: block;
+    font-weight: bold;
+}
+
+.form-campo input {
+    margin-bottom: 8px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #119759;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
 }
